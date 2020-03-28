@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "52382815279",
+    "firebase_url": "https://auth-learn-94a7f.firebaseio.com",
+    "project_id": "auth-learn-94a7f",
+    "storage_bucket": "auth-learn-94a7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52382815279:android:86f53723554df9de70e2da",
+        "android_client_info": {
+          "package_name": "com.kilasbalik.authlearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52382815279-7flk18r4bbomph586e5edkm4s86plhu6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kilasbalik.authlearn",
+            "certificate_hash": "16b7821944f8cdaeb3757cf165a7eb96ce01ddbb"
+          }
+        },
+        {
+          "client_id": "52382815279-mh4insvd0u97olfk8a9msib77dh8d662.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADwM9_j-Q_gBO_xXwC2EeFtG0gFyckLQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52382815279-mh4insvd0u97olfk8a9msib77dh8d662.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
