@@ -19,19 +19,26 @@ class AuthService with ChangeNotifier {
       String lastName,
       String email,
       String password}) async {
-    var user = await FirebaseAuth.instance
-        .createUserWithEmailAndPassword(email: email, password: password);
-    UserUpdateInfo info = UserUpdateInfo();
-    info.displayName = '$firstName $lastName';
-    return await user.user.updateProfile(info);
+    try {
+      var user = await FirebaseAuth.instance
+          .createUserWithEmailAndPassword(email: email, password: password);
+      UserUpdateInfo info = UserUpdateInfo();
+      info.displayName = '$firstName $lastName';
+      await user.user.updateProfile(info);
+      notifyListeners();
+      return user.user;
+    } catch (e) {
+      throw AuthException(e.code, e.message);
+    }
   }
 
   Future<FirebaseUser> loginUser({String email, String password}) async {
     try {
-      var result = await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password);
+      var result = await FirebaseAuth.instance
+          .signInWithEmailAndPassword(email: email, password: password);
       notifyListeners();
       return result.user;
-    } catch(e) {
+    } catch (e) {
       throw AuthException(e.code, e.message);
     }
   }
